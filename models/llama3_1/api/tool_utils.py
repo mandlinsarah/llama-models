@@ -24,7 +24,6 @@ def is_json(s):
         return isinstance(parsed, dict)
     except json.JSONDecodeError:
         return False
-    return True
 
 
 class ToolUtils:
@@ -96,3 +95,4 @@ class ToolUtils:
             fname = t.tool_name
             args = json.dumps(t.arguments)
             return f"<function={fname}>{args}</function>"
+
